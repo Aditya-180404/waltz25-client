@@ -9,7 +9,7 @@ import Merchandise from "./pages/Merchandise/Merchandise.jsx";
 import Schedule from "./pages/Schedule/Schedule.jsx";
 import Conditions from "./pages/Conditions/Conditions.jsx";
 
-const AppContent = () => {
+const App = () => {
   const location = useLocation();
   const hideNavbar = location.pathname === "/login" || location.pathname === "/signup";
 
@@ -30,16 +30,5 @@ const AppContent = () => {
   );
 };
 
-const App = () => (
-  <Router>
-    <AppContent />
-  </Router>
-);
 
-       
-      </div>
-    </Router>
-  );
-}
-
-export default App;
+export default App
