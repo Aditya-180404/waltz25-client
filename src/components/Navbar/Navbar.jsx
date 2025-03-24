@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -37,8 +36,18 @@ const Navbar = () => {
         </ul>
 
         <div className="hidden md:flex space-x-4">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">Register</button>
-          <button className="bg-red-600 text-white px-6 py-2 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out">Login</button>
+          <button
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out"
+            onClick={() => navigate("/signup")}
+          >
+            Register
+          </button>
+          <button
+            className="bg-red-600 text-white px-6 py-2 rounded-lg shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out"
+            onClick={() => navigate("/login")}
+          >
+            Login
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -80,10 +89,16 @@ const Navbar = () => {
 
             {/* Authentication Buttons */}
             <div className="absolute bottom-10 flex gap-6">
-              <button className="px-6 py-3 text-lg font-bold text-white bg-red-500 rounded-lg shadow-lg transition-all duration-300 hover:animate-bounce hover:shadow-red-500">
+              <button
+                className="px-6 py-3 text-lg font-bold text-white bg-red-500 rounded-lg shadow-lg transition-all duration-300 hover:animate-bounce hover:shadow-red-500"
+                onClick={() => navigate("/login")}
+              >
                 Login
               </button>
-              <button className="px-6 py-3 text-lg font-bold text-white bg-blue-500 rounded-lg shadow-lg transition-all duration-300 hover:animate-bounce hover:shadow-blue-500">
+              <button
+                className="px-6 py-3 text-lg font-bold text-white bg-blue-500 rounded-lg shadow-lg transition-all duration-300 hover:animate-bounce hover:shadow-blue-500"
+                onClick={() => navigate("/signup")}
+              >
                 Register
               </button>
             </div>

@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Hero.css";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <div className="hero">
       {/* Hero Section */}
@@ -15,7 +17,7 @@ const Hero = () => {
         <p>Groove Along!</p>
         <div className="buttons">
           <button className="view-btn">View Details</button>
-          <button className="register-btn">Register Now</button>
+          <button className="register-btn"  onClick={() => navigate("/signup")}>Register Now</button>
         </div>
       </section>
 
