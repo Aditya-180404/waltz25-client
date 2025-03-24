@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-left">
                         <h1>WALTZ <span className="highlight">2025</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis atque consectetur doloribus? Obcaecati, quisquam quia dicta officiis temporibus soluta! Animi?</p>
+                        <p>WALTZ, The official cultural fest of UIT , brings students from every part of the country to showcase their passion and skills in music, dance, drama, and sports.It also offers alumni a chance to relive their college memories. </p>
                     </div>
                     <div className="footer-right">
                         <div className="footer-links">
