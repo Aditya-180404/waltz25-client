@@ -49,11 +49,11 @@ const Hero = () => {
         <div className="about-content">
           <div className="about-box">
             <h3>WALTZ 2K25</h3>
-            <p>Lorem ipsum dolor sit amet...</p>
+            <p>Experience the vibrant spirit of UIT BU's Cultural Fest 2025 – a celebration of music, dance, and creativity! Join us for an unforgettable fusion of talent, tradition, and innovation.</p>
           </div>
           <div className="about-box">
             <h3>UIT BURDWAN</h3>
-            <p>Lorem ipsum dolor sit amet...</p>
+            <p>UIT is a top engineering college with quality education,excellent infrastructure,experienced faculty,and a dynamic sudent community that promotes extracurricular acivities and hosts various events.</p>
           </div>
         </div>
       </section>
