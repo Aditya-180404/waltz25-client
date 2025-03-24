@@ -36,4 +36,10 @@ const App = () => (
   </Router>
 );
 
+       
+      </div>
+    </Router>
+  );
+}
+
 export default App;
