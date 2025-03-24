@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx"; 
+import Footer from "./components/Footer/Footer.jsx"; 
 import Home from "./pages/Home/Home.jsx";
 import Signup from "./pages/Signup/Signup.jsx";
 import Login from "./pages/Login/Login.jsx";
@@ -9,13 +10,17 @@ import Merchandise from "./pages/Merchandise/Merchandise.jsx";
 import Schedule from "./pages/Schedule/Schedule.jsx";
 import Conditions from "./pages/Conditions/Conditions.jsx";
 
-const App = () => {
+const AppContent = () => {
   const location = useLocation();
-  const hideNavbar = location.pathname === "/login" || location.pathname === "/signup";
+  const definedRoutes = ["/", "/signup", "/login", "/team", "/merchandise", "/schedule", "/terms"];
+  
+  const isUndefinedRoute = !definedRoutes.includes(location.pathname);
+  const hideNavbar = isUndefinedRoute || location.pathname === "/login" || location.pathname === "/signup";
+  const hideFooter = isUndefinedRoute; // Footer is hidden only on undefined routes
 
   return (
     <>
-      {!hideNavbar && <Navbar />} 
+      {!hideNavbar && <Navbar />}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -26,9 +31,18 @@ const App = () => {
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/terms" element={<Conditions />} />
       </Routes>
+
+      {!hideFooter && <Footer />}
     </>
   );
 };
 
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
+};
 
-export default App
+export default App;
