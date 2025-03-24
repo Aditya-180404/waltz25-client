@@ -9,6 +9,16 @@ import Team from "./pages/Team/Team.jsx";
 import Merchandise from "./pages/Merchandise/Merchandise.jsx";
 import Schedule from "./pages/Schedule/Schedule.jsx";
 import Conditions from "./pages/Conditions/Conditions.jsx";
+import Hero from "./components/Hero/Hero.jsx";  
+import "./App.css";  
+
+const AppWrapper = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  );
+};
 
 const AppContent = () => {
   const location = useLocation();
@@ -23,7 +33,7 @@ const AppContent = () => {
       {!hideNavbar && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Hero />} /> 
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/team" element={<Team />} />
