@@ -22,7 +22,7 @@ const AppWrapper = () => {
 
 const AppContent = () => {
   const location = useLocation();
-  const definedRoutes = ["/", "/signup", "/login", "/team", "/merchandise", "/schedule", "/terms"];
+  const definedRoutes = ["/", "/home", "/signup", "/login", "/team", "/merchandise", "/schedule", "/terms"];
   
   const isUndefinedRoute = !definedRoutes.includes(location.pathname);
   const hideNavbar = isUndefinedRoute || location.pathname === "/login" || location.pathname === "/signup";
@@ -33,7 +33,8 @@ const AppContent = () => {
       {!hideNavbar && <Navbar />}
 
       <Routes>
-        <Route path="/" element={<Hero />} /> 
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} /> 
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/team" element={<Team />} />
