@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="footer-top">
                     <div className="footer-left">
                         <h1>WALTZ <span className="highlight">2025</span></h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis atque consectetur doloribus? Obcaecati, quisquam quia dicta officiis temporibus soluta! Animi?</p>
+                        <p>Experience the vibrant spirit of UIT BU's Cultural Fest 2025 – a celebration of music, dance, and creativity! Join us for an unforgettable fusion of talent, tradition, and innovation.</p>
                     </div>
                     <div className="footer-right">
                         <div className="footer-links">
