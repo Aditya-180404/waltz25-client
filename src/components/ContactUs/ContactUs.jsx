@@ -8,6 +8,8 @@ function ContactUs() {
   useEffect(() => {
     setAnimate(true);
   }, []);
+  import React from "react";
+  import "../Hero/Hero.css";
 
   return (
     <div
