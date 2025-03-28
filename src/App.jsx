@@ -10,6 +10,10 @@ import Merchandise from "./pages/Merchandise/Merchandise.jsx";
 import Schedule from "./pages/Schedule/Schedule.jsx";
 import Conditions from "./pages/Conditions/Conditions.jsx";
 import Hero from "./components/Hero/Hero.jsx";  
+import Events from "./pages/Events/Events.jsx";
+import EventLists from "./pages/Events/EventLists.jsx";
+import EventDetail from "./pages/Events/EventDetail.jsx";
+
 import "./App.css";  
 
 const AppWrapper = () => {
@@ -41,6 +45,11 @@ const AppContent = () => {
         <Route path="/merchandise" element={<Merchandise />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/terms" element={<Conditions />} />
+        {/* ✅ Fix: No extra `<Routes>` wrapper */}
+        <Route path="/events" element={<Events />} />
+        <Route path="/events/list" element={<EventLists />} />
+        <Route path="/events/:id" element={<EventDetail />} />
+
       </Routes>
 
       {!hideFooter && <Footer />}
