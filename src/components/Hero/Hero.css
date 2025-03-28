@@ -1,0 +1,918 @@
+/* Hero.css */
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  background-image: url('https://i.imgur.com/h1Suu0I.jpeg'); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+  
+  /* Logo Styles */
+  .hero-logo {
+    max-width: 75%; 
+    height: auto; 
+    margin-bottom: 1rem; 
+  }
+  /* Groove Along! Text */
+  .hero-section p {
+    font-size: 2.5rem; 
+    font-weight: 900; 
+    font-family: "Montserrat", sans-serif; 
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #800080, #FFD700); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    text-shadow: 4px 4px 15px rgba(128, 0, 128, 0.8);
+    letter-spacing: 3px;
+    animation: grooveText 2s infinite alternate ease-in-out;
+    margin-bottom: 2rem;
+  }
+  
+  /* Groove Animation */
+  @keyframes grooveText {
+    0% {
+      transform: scale(1);
+      text-shadow: 4px 4px 15px rgba(128, 0, 128, 0.8); 
+    }
+    100% {
+      transform: scale(1.1);
+      text-shadow: 4px 4px 20px rgba(255, 215, 0, 0.8);
+    }
+  }
+  
+  /* Buttons Container */
+  .buttons {
+    display: flex;
+    gap: 1.5rem; 
+  }
+  
+  /* Buttons Styles */
+  .view-btn, .register-btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* View Button */
+  .view-btn {
+    background-color: #A023BF; 
+    color: white;
+    border: 2px solid transparent;
+  }
+  
+  .view-btn:hover {
+    background-color: #8A1FA3; 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Register Button */
+  .register-btn {
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.777);
+    border: 2px solid #A023BF;
+  }
+  
+  .register-btn:hover {
+    background-color: #a823bf;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero-logo {
+      max-width: 85%;
+    }
+  
+    .hero-section p {
+      font-size: 1.5rem; /* Adjusted for tablets */
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .view-btn, .register-btn {
+      width: 100%;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-logo {
+      max-width: 95%;
+    }
+  
+    .hero-section p {
+      font-size: 1.2rem; /* Adjusted for small screens */
+    }
+  }
+  
+  /* Events Section */
+  .events {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    background-image: url('https://i.imgur.com/p9IxkUR.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .events h2 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff1493, #ff69b4, #ff1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 2;
+    margin-bottom: 40px;
+    animation: glowHeading 2s infinite alternate ease-in-out;
+  }
+  
+  @keyframes glowHeading {
+    0% {
+      text-shadow: 0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(255, 105, 180, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 105, 180, 0.8);
+    }
+  }
+  
+  .event-gallery {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+  
+  .event {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 4px solid #ff1493;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .event:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.8);
+  }
+  
+  .event img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Position the images */
+  .event:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .event:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+  
+  .event:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  
+  .event:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+  
+  .event:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+    .events h2 {
+      font-size: 2.5rem;
+    }
+  
+    .event-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 15px;
+    }
+  
+    .event {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .event:nth-child(1) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+  
+    .event:nth-child(2) {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+  
+    .event:nth-child(3) {
+      grid-column: 1 / 2;
+      grid-row: 3 / 4;
+    }
+  
+    .event:nth-child(4) {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+    }
+  
+    .event:nth-child(5) {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      width: 150px;
+      height: 150px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .events h2 {
+      font-size: 2rem;
+    }
+  
+    .event-gallery {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 10px;
+    }
+  
+    .event {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .event:nth-child(1),
+    .event:nth-child(2),
+    .event:nth-child(3),
+    .event:nth-child(4) {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+  
+    .event:nth-child(5) {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+    }
+  }
+  /* About Section */
+  .about {
+    position: relative;
+    padding: 60px 20px; 
+    text-align: center;
+    color: white; 
+    background-image: url('https://i.imgur.com/LJ9wge1.png');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    overflow: hidden;
+    min-height: 110vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  /* Dark Overlay for Better Text Visibility */
+  .about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    z-index: 1;
+  }
+  
+  /* Blur Effect at the Top */
+  .about::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)); /* Gradient for smooth transition */
+    backdrop-filter: blur(10px); /* Blur effect */
+    z-index: 2;
+  }
+  
+  /* Heading Styles */
+  .about h2 {
+    font-size: 3rem; /* Larger text */
+    font-weight: 900; /* Bold text */
+    font-family: "Bebas Neue", sans-serif; /* Unique font */
+    text-transform: uppercase;
+    color: #ff1493; /* Deep pink color */
+    position: relative;
+    z-index: 3; /* Ensure text is above the overlay */
+    margin-bottom: 60px; /* Increased space below the heading */
+  }
+  
+  /* Content Container */
+  .about-content {
+    display: flex;
+    justify-content: space-between; /* Space between left and right boxes */
+    gap: 40px; /* Increased gap between boxes */
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 3; /* Ensure content is above the overlay */
+    max-width: 1200px; /* Increased width for content */
+    margin: 0 auto; /* Center the content */
+    padding-top: 20px; /* Added padding to lower the boxes */
+    width: 100%; /* Ensure the container takes full width */
+  }
+  
+  /* About Box Styles */
+  .about-box {
+    width: 48%; /* Adjusted width for left and right boxes */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Blur effect for the boxes */
+  }
+  
+  /* Left Box */
+  .about-box.left {
+    margin-right: auto; /* Push to the leftmost side */
+  }
+  
+  /* Right Box */
+  .about-box.right {
+    margin-left: auto; /* Push to the rightmost side */
+  }
+  
+  .about-box h3 {
+    font-size: 1.8rem; /* Slightly larger text */
+    font-weight: 500; /* Slightly bold */
+    margin-bottom: 10px;
+    color: #fff; /* White text */
+    font-family: "Montserrat", sans-serif; /* Modern font */
+  }
+  
+  .about-box p {
+    font-size: 1rem;
+    color: #ddd; /* Light gray text */
+    font-family: "Poppins", sans-serif; /* Clean font */
+  }
+  /* Sponsors Section */
+  .sponsors {
+    position: relative;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    background-image: url('https://i.imgur.com/46RBggl.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sponsors::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .sponsors h2 {
+    position: relative;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: "Bebas Neue", sans-serif;
+    text-transform: uppercase;
+    color: #ff1493;
+    z-index: 2;
+    margin-bottom: 20px;
+  }
+  
+  .sponsor-text {
+    position: relative;
+    font-size: 1.5rem;
+    color: #fff;
+    z-index: 2;
+    margin-bottom: 40px;
+  }
+  
+  /* Sponsors Grid Container */
+  .sponsor-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  /* Sponsor Container */
+  .sponsor-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1.2;
+    border: 2px solid #ff1493;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .sponsor-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 20, 147, 0.5);
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .sponsor-container img {
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .sponsor-container p {
+    font-size: 1rem;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+  }
+  
+  /* Sponsor Us Button */
+  .sponsor-btn {
+    padding: 1rem 4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #800080, #A023BF, #800080);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    margin-top: 40px;
+    width: auto;
+    display: inline-block;
+  }
+  
+  .sponsor-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(128, 0, 128, 0.5);
+  }
+  
+  .sponsor-btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  .sponsor-btn:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sponsor-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  
+    .sponsor-container {
+      aspect-ratio: 1 / 1.1;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sponsor-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+  
+    .sponsor-container {
+      aspect-ratio: 1 / 1;
+      padding: 10px;
+    }
+  
+    .sponsors h2 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  
+    .sponsor-text {
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+  
+    .sponsor-text {
+      background: linear-gradient(90deg, #ff1493, #ff69b4, #ff1493);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(255, 105, 180, 0.5);
+      animation: glowText 3s infinite alternate ease-in-out;
+    }
+  
+    @keyframes glowText {
+      0% {
+        text-shadow: 0 0 10px rgba(255, 20, 147, 0.5), 0 0 20px rgba(255, 105, 180, 0.5);
+      }
+      100% {
+        text-shadow: 0 0 20px rgba(255, 20, 147, 0.8), 0 0 40px rgba(255, 105, 180, 0.8);
+      }
+    }
+  }
+  /* About Us Section */
+  .about-us {
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(255, 182, 193, 0.8); 
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+  
+  .about-us h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif; 
+    color: #ff1493; 
+    text-shadow: 2px 2px 8px rgba(255, 20, 147, 0.5); 
+  }
+  
+  .about-us p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif; 
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* About Us Section */
+  .about-us {
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: rgba(255, 182, 193, 0.8); 
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+  
+  .about-us h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif; 
+    color: #ff1493; /* Deep pink */
+    text-shadow: 2px 2px 8px rgba(255, 20, 147, 0.5); 
+  }
+  
+  .about-us p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif; 
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Contact Section */
+  .contact {
+    background: url("https://i.imgur.com/yZsP8Lu.png") no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.768);
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Contact Heading */
+  .contact h2 {
+    font-size: 3rem; 
+    text-transform: uppercase;
+    letter-spacing: 4px; 
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.36); 
+    font-family: 'Orbitron', sans-serif; 
+    color: rgba(255, 255, 255, 0.859); 
+  }
+  
+  /* Contact Details */
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    width: 90%;
+    gap: 80px;
+  }
+  
+  /* Left Section: Email & Phone */
+  .contact-info {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif; /* Clean and modern font */
+    font-size: 1.6rem; /* Slightly larger font size */
+  }
+  
+  .contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9); /* White text */
+  }
+  
+  .contact-info a {
+    color: white; /* White text for emails and numbers */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-info a:hover {
+    
+    color: #fff714e9; /* Deep pink on hover */
+  }
+  .contact-info p:hover {
+   
+    color: #fff714e9; /* Deep pink on hover */
+  }
+  
+  /* Icons for Email and Call */
+  .contact-info p::before {
+    content: '';
+    display: inline-block;
+    width: 24px; /* Adjust size as needed */
+    height: 24px; /* Adjust size as needed */
+    background-size: cover; /* Ensures the icon fits the container */
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
+  .contact-info p.email::before {
+    background-image: url('https://i.imgur.com/3pK0BaR.png'); /* Mail icon */
+  }
+  
+  .contact-info p.phone::before {
+    background-image: url('https://i.imgur.com/p2TUhhs.png'); /* Call icon */
+  }
+  /* Right Section: Form */
+  .contact-form {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background: transparent; /* Fully transparent background */
+    padding: 20px;
+    border: none;
+  }
+  
+  /* Form Labels (Name, Email, Message) */
+  .contact-form label {
+    font-size: 1.3rem; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    color: rgba(255, 255, 255, 0.8); /* Dim white (80% opacity) */
+    font-family: 'Montserrat', sans-serif; /* Clean and modern font */
+    margin-bottom: 5px; /* Space below the label */
+  }
+  
+  /* Make input fields and textarea fully transparent */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    max-width: 550px;
+    padding: 14px;
+    border: 2px solid rgba(255, 105, 180, 0.81); /* Pinkish border */
+    background: rgba(255, 182, 193, 0.1); /* Pinkish background with transparency */
+    color: rgba(255, 255, 255, 0.9); /* Bright white text */
+    font-size: 1.1rem;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+    backdrop-filter: none; /* Remove blur effect */
+    font-family: 'Montserrat', sans-serif; /* Clean and modern font */
+  }
+  
+  /* Fix autofill issue */
+  .contact-form input:-webkit-autofill,
+  .contact-form textarea:-webkit-autofill {
+    background-color: rgba(255, 182, 193, 0.1) !important;
+    color: rgba(255, 255, 255, 0.9) !important; /* Bright white text */
+    border-color: #ff1493 !important; /* Deep pink border for autofill */
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.8) !important;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Placeholder Styling */
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+  }
+  
+  /* Improved Focus Effect */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #ff1493; /* Deep pink border on focus */
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.9); /* Pink glow */
+    transform: scale(1.02);
+    background: rgba(255, 182, 193, 0.2); /* Slightly brighter background on focus */
+  }
+  
+  /* Unique & Modern Submit Button */
+  .contact-form button {
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none; /* Remove border */
+    border-radius: 70px; /* Fully rounded shape */
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff69b4, #ff1493); /* Pink gradient */
+    color: white;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif; /* Modern and bold font */
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(255, 20, 147, 0.3); /* Subtle shadow */
+  }
+  
+  /* Submit Button Hover Effect */
+  .contact-form button:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 8px 16px rgba(255, 20, 147, 0.6); /* Stronger pink glow on hover */
+    background: linear-gradient(45deg, #ff1493, #ff69b4); /* Reverse gradient on hover */
+  }
+  
+  /* New Shine Effect on Hover */
+  .contact-form button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.4),
+      transparent
+    ); /* Horizontal shine effect */
+    transition: all 0.5s ease;
+  }
+  
+  .contact-form button:hover::before {
+    left: 100%; /* Move the shine effect across the button */
+  }
+  
+  /* Text Glow Effect on Hover */
+  .contact-form button:hover span {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8); /* Glow effect on text */
+  }
+  
+  /* Optional: Add a subtle animation to the button */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .contact-form button {
+    animation: pulse 2s infinite ease-in-out; /* Subtle pulsing animation */
+  }
+  
+  .contact-form button:hover {
+    animation: none; /* Disable pulse animation on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    .contact-details {
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    .contact-info {
+      text-align: center;
+    }
+  
+    .contact-form {
+      align-items: center;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      max-width: 90%;
+    }
+  }
